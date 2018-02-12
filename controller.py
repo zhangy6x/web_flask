@@ -16,7 +16,7 @@ app = Flask(__name__)
 #     Bootstrap(app)
 
 
-@app.route('/vib1', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     form = InputForm(request.form)
     if request.method == 'POST' and form.validate():
@@ -28,9 +28,9 @@ def index():
     return render_template('view.html', form=form, result=result)
 
 
-@app.route('/')
-def main():
-    return render_template('index.html')
+# @app.route('/')
+# def main():
+#     return render_template('index.html')
 
 
 @app.route("/hello")
