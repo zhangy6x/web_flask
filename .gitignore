@@ -1,27 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*$py.class
 
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -121,6 +100,7 @@ ENV/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
@@ -158,16 +138,13 @@ fabric.properties
 # mac
 
 # Packages
-eggs
-parts
-bin
-var
-sdist
-MANIFEST
+# eggs
+# parts
+# bin
+# var
+# sdist
+# MANIFEST
 
-documentation/source/_templates/
-.idea/sf-acc.xml
-.idea/preferred-vcs.xml
-.idea/other.xml
+static/temp_file
 
-/ResoFit/result
+
