@@ -1,4 +1,14 @@
-<h4>Sample info input:</h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neutron Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div style="color:#0000FF">
+    <h2>Sample info input:</h2>
+</div>
 
 <form method=post action="">
     {% for field in form %}
@@ -11,11 +21,13 @@
                     {% endfor %}</ul>
             {% endif %}</dd>
     {% endfor %}
-    <p><input type=submit value=Compute></form></p>
+    <br>
+    <input type=submit value=Compute></form>
+<hr>
+{% if result != None %}
+    <h4>Plot:</h4>
+    <img src="{{ result }}" alt="plot">
+{% endif %}
 
-<p>
-    {% if result != None %}
-        <h4>Plot:</h4>
-        <img src="{{ result }}">
-    {% endif %}
-</p>
+</body>
+</html>

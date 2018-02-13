@@ -1,6 +1,11 @@
-from numpy import exp, cos, linspace
+import glob
+import os
+import time
+import io
+import base64
+
 import matplotlib.pyplot as plt
-import os, time, glob
+from numpy import exp, cos, linspace
 
 
 def damped_vibrations(t, A, b, w):
@@ -9,11 +14,18 @@ def damped_vibrations(t, A, b, w):
 
 def compute(A, b, w, T, resolution=500):
     """Return filename of plot of the damped_vibration function."""
+    # img = io.BytesIO()
     t = linspace(0, T, resolution + 1)
     u = damped_vibrations(t, A, b, w)
     plt.figure()  # needed to avoid adding curves in plot
     plt.plot(t, u)
     plt.title('A=%g, b=%g, w=%g' % (A, b, w))
+
+    # plt.savefig(img, format='png')
+    # img.seek(0)
+
+    # plot_url = base64.b64encode(img.getvalue()).decode()
+
     abspath = os.path.abspath(os.path.dirname(__file__))
     static_dir = os.path.join(abspath, 'static')
     temp_file_dir = os.path.join(static_dir, 'temp_file')
