@@ -1,14 +1,11 @@
 from model import InputForm
 from flask import Flask, render_template, request
 from compute import init_reso, add_layer
-import sys
 
-import random
 import io
 import matplotlib.pyplot as plt
 import base64
 
-from flask import Flask, make_response
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
