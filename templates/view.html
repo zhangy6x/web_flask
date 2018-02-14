@@ -8,6 +8,7 @@
 <body>
 <div style="color:#0000FF">
     <h2>Sample info input:</h2>
+    <hr>
 </div>
 
 <form method=post action="">
@@ -26,7 +27,8 @@
 <hr>
 {% if result != None %}
     <h4>Plot:</h4>
-    <img src="{{ result }}" alt="plot">
+    <p>{{ result }}</p>
+    <img src="{{ plot }}" alt="plot">
 {% endif %}
 
 </body>
